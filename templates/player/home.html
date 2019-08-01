@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}
+    player home
+{% endblock %}
+
+{% block styling %}
+    {{ block.super }}
+    <style type="text/css">
+        .mission {
+            background-color: #debb27;
+        }
+    </style>
+{% endblock styling %}
+
+{% block content %}
+<div class="row">
+    <div class="page-header">{{user.username}} Missions</div>
+    {% for mission in missions %}
+
+        <div class="col-md-3 mission">
+            <form>
+                {{ mission }}
+                <button type="submit"  class="btn btn-success" >start</button>
+            </form>
+
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

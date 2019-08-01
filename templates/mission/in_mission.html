@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+    player home
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    {% for i in range(1,4) %}
+        <div class="col-md-{{3 * i}}">
+            AAA
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
